@@ -11,9 +11,12 @@ from handlers.helpers import str_to_b64
 async def reply_forward(message: Message, file_id: int):
     try:
         await message.reply_text(
-            f"**Here is Sharable Link of this file:**\n"
-            f"https://telegram.me/{Config.BOT_USERNAME}?start=QualityLinks_{str_to_b64(str(file_id))}\n\n"
-            f"__To Retrive the Stored File, just open the link!__",
+            f"**Join Our Main Channels 👇**\n\n"
+            f"**✅ TV Serials - https://t.me/+lJXYBKG6AbVmZmU1**\n\n"
+            f"**✅ New Movies - https://t.me/+VuRNG-wRgs5jY2M1**\n\n"
+            f"**✅ Web Series - https://t.me/+Z47fo16ybXhkNDA9**\n\n"
+            f"**✅ Ullu Adult - https://t.me/+EXtAQsQ5rSQ3NDgx**\n\n"
+            f"**Please Join & Keep Support! ❤**",
             disable_web_page_preview=True, quote=True)
     except FloodWait as e:
         await asyncio.sleep(e.value)
