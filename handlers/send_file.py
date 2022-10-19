@@ -12,10 +12,10 @@ async def reply_forward(message: Message, file_id: int):
     try:
         await message.reply_text(
             f"**Join Our Main Channels 👇**\n\n"
-            f"**✅ TV Serials - https://t.me/+lJXYBKG6AbVmZmU1**\n\n"
-            f"**✅ New Movies - https://t.me/+VuRNG-wRgs5jY2M1**\n\n"
-            f"**✅ Web Series - https://t.me/+Z47fo16ybXhkNDA9**\n\n"
-            f"**✅ Ullu Adult - https://t.me/+EXtAQsQ5rSQ3NDgx**\n\n"
+            f"**✅ Tamil Movies - https://t.me/+QD9i0-ZKM69lN2Fh**\n\n"
+            f"**✅ Hindi Movies - https://t.me/+GcKK6-Y25SlmZDdh**\n\n"
+            f"**✅ Telugu Movie - https://t.me/+aA0w5K6Sr_RiYWMx**\n\n"
+            f"**✅ Mallu Movies - https://t.me/+EJn9pJtDFx5kOTNh**\n\n"
             f"**Please Join & Keep Support! ❤**",
             disable_web_page_preview=True, quote=True)
     except FloodWait as e:
