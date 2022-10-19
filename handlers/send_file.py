@@ -11,12 +11,9 @@ from handlers.helpers import str_to_b64
 async def reply_forward(message: Message, file_id: int):
     try:
         await message.reply_text(
-            f"**Join Our Main Channels 👇**\n\n"
-            f"**✅ Tamil Movies - https://t.me/+QD9i0-ZKM69lN2Fh**\n\n"
-            f"**✅ Hindi Movies - https://t.me/+GcKK6-Y25SlmZDdh**\n\n"
-            f"**✅ Telugu Movie - https://t.me/+aA0w5K6Sr_RiYWMx**\n\n"
-            f"**✅ Mallu Movies - https://t.me/+EJn9pJtDFx5kOTNh**\n\n"
-            f"**Please Join & Keep Support! ❤**",
+            f"**Here is Sharable Link of this file:**\n"
+            f"https://t.me/{Config.BOT_USERNAME}?start=Quality-Links-TG_{str_to_b64(str(file_id))}\n\n"
+            f"__To Retrive the Stored File, just open the link!__",
             disable_web_page_preview=True, quote=True)
     except FloodWait as e:
         await asyncio.sleep(e.value)
