@@ -74,8 +74,8 @@ async def start(bot: Client, cmd: Message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/Quality_Linkzs"),
-                        InlineKeyboardButton("Bots Channel", url="https://t.me/Quality_Linkzs")
+                        InlineKeyboardButton("Support Group", url="https://t.me/Quality_Links_TG"),
+                        InlineKeyboardButton("Bots Channel", url="https://t.me/Quality_Links_TG")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
@@ -120,7 +120,7 @@ async def main(bot: Client, message: Message):
                 return
 
         if message.from_user.id in Config.BANNED_USERS:
-            await message.reply_text("Sorry, You are banned!\n\nContact [Support Group](https://t.me/Quality_Linkzs)",
+            await message.reply_text("Sorry, You are banned!\n\nContact [Support Group](https://t.me/Quality_Links_TG)",
                                      disable_web_page_preview=True)
             return
 
@@ -148,7 +148,7 @@ async def main(bot: Client, message: Message):
         try:
             forwarded_msg = await message.forward(Config.DB_CHANNEL)
             file_er_id = str(forwarded_msg.id)
-            share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=QualityLinks_{str_to_b64(file_er_id)}"
+            share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=Quality-Links-TG_{str_to_b64(file_er_id)}"
             CH_edit = await bot.edit_message_reply_markup(message.chat.id, message.id,
                                                           reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(
                                                               "Get Sharable Link", url=share_link)]]))
@@ -315,7 +315,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 [
                     [
                         InlineKeyboardButton("Source Codes of Bot",
-                                             url="https://t.me/Quality_Linkzs")
+                                             url="https://t.me/Quality_Links_TG")
                     ],
                     [
                         InlineKeyboardButton("Go Home", callback_data="gotohome"),
@@ -333,7 +333,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 [
                     [
                         InlineKeyboardButton("Source Codes of Bot",
-                                             url="https://t.me/Quality_Linkzs")
+                                             url="https://t.me/Quality_Links_TG")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
@@ -350,8 +350,8 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/Quality_Linkzs"),
-                        InlineKeyboardButton("Bots Channel", url="https://t.me/Quality_Linkzs")
+                        InlineKeyboardButton("Support Group", url="https://t.me/Quality_Links_TG"),
+                        InlineKeyboardButton("Bots Channel", url="https://t.me/Quality_Links_TG")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
@@ -371,7 +371,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 user = await bot.get_chat_member(channel_chat_id, cmd.message.chat.id)
                 if user.status == "kicked":
                     await cmd.message.edit(
-                        text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/Quality_Linkzs).",
+                        text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/Quality_Links_TG).",
                         disable_web_page_preview=True
                     )
                     return
@@ -394,7 +394,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 return
             except Exception:
                 await cmd.message.edit(
-                    text="Something went Wrong. Contact my [Support Group](https://t.me/Quality_Linkzs).",
+                    text="Something went Wrong. Contact my [Support Group](https://t.me/Quality_Links_TG).",
                     disable_web_page_preview=True
                 )
                 return
@@ -404,8 +404,8 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/Quality_Linkzs"),
-                        InlineKeyboardButton("Bots Channel", url="https://t.me/Quality_Linkzs")
+                        InlineKeyboardButton("Support Group", url="https://t.me/Quality_Links_TG"),
+                        InlineKeyboardButton("Bots Channel", url="https://t.me/Quality_Links_TG")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
